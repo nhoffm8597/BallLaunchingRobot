@@ -22,6 +22,7 @@ public class Wheel implements Runnable {
 			}
 			running = true;
 		}
+		new Thread(this, "wheelThread").start();
 	}
 	
 	public void run() {
@@ -32,7 +33,6 @@ public class Wheel implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			new Thread(this, "wheelThread").start();
 		}
 	}
 	
